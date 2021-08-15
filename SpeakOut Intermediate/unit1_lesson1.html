@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Who do you think you are?</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <h1 class='primary-title'>Who do you think you are?</h1>
+        <img class='menu' src='images/menu.svg'>
+    </header>
+    <main>
+        <div class='overlay menu-popup d-none'>
+            <img class='close' src='images/cross.png'>
+            <ul class='menu-list'>
+                <li class='lesson-words-link'>This lesson new words</li>
+                <li class='personal-words-link'>My new words</li>
+            </ul>
+        </div>
+        <div class='overlay full-size  lesson-new-words d-none'>
+            <img class='close' src='images/cross.png'>
+            <div>
+                <table class='lesson-words'>
+                    <tr>
+                        <th>English</th>
+                        <th>Russian</th>
+                    </tr>
+                </table>
+                <button class='btn btn-add-all'>Add to my words</button>
+            </div>
+
+        </div>
+        <div class='overlay full-size personal-words d-none'>
+            <img class='close' src='images/cross.png'>
+            <div class='existing-words'>
+                <p class='if-nothing d-none'>You don't have any words yet</p>
+                <table class='personal-words-list d-none'>
+                    <tr>
+                        <th>English</th>
+                        <th>Russian</th>
+                    </tr>
+                </table>
+            </div>
+            
+            <div class='add-words'>
+                <table class='table-add-words'>
+                    <tr>
+                        <th>English</th>
+                        <th>Russian</th>
+                    </tr>
+                    <tr>
+                        <td class='add-words-row'><input type="text" class='input add-input'></td>
+                        <td class='add-words-row'><input type="text" class='input add-input'></td>
+                    </tr>
+                </table>
+                <button class='btn btn-add-words'>Add</button>
+            </div>
+
+
+        </div>
+        <div class='lesson lesson1'>
+            <img class='img ex1' src='images/ex1.png'>
+            <img class='img ex2-numbers' src='images/ex2a_numbers.png'>
+            <img class='img ex2-letters' src='images/ex2a_letters.png'>
+            <input type='text' class='input ex2-input' placeholder='Your answer - the letters in the right order'>
+            <p class='result-info d-none'></p>
+            <button class='btn btn-show-new-words'>Show new words</button>
+            <img class='img ex3a' src='images/ex3a.png'>
+            <img class='img ex3-text1' src='images/ex3a_text1.png'>
+            <img class='img ex3-text2' src='images/ex3a_text2.png'>
+            <img class='img ex3d' src='images/ex3a_part2.png'>
+            <div class='ex3d-inputs'>
+                <input type='text' class='input answers1' placeholder='Question 1' data-answer='make a fortune' data-alt='made a fortune'>
+                <input type='text' class='input answers2' placeholder='Question 2' data-answer='a gold medallist' data-alt='gold medallist'>
+                <input type='text' class='input answers3' placeholder='Question 3' data-answer='organize security' data-alt='organising security'>
+                <input type='text' class='input answers4' placeholder='Question 4' data-answer='tragic'>
+                <input type='text' class='input answers5' placeholder='Question 5' data-answer='abandon' data-alt='abandoned'>
+                <input type='text' class='input answers6' placeholder='Question 6' data-answer='being sentenced'>
+            </div>
+            <img class='img ex3-stars1' src='images/ex3a_stars1.png'>
+            <img class='img ex3-stars2' src='images/ex3a_stars2.png'>
+    
+            <img class='img ex5' src='images/ex5.png'>
+        </div>
+    </main>
+    <footer></footer>
+</body>
+    <script src='script.js'></script>
+</html>

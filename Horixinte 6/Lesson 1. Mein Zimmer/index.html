@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mein Zimmer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class='lesson lesson1'>
+        <h2>Lektion 1</h2>
+        <div class='ex1'>
+            <h3>Finde die richtige Übersetzung</h3>
+            <div class="cards">
+                <div class='de-cards'>
+                    <!-- <li class='de-card'>das Zimmer</li> -->
+                </div>
+                <div class='empty-cards'>
+                    <!-- <li class='empty-card' data-name='Комната'></li> -->
+                </div>
+                <div class='ru-cards'>
+                    <!-- <li class='ru-card'>Комната</li> -->
+                </div>
+            </div>
+            <div class="right-answers">
+                <h4>Deine richtige Antworte</h4>
+                <div class='try-info'>
+                    <b>Datum</b><span class="date"></span>
+                    <b>Versuch:</b><span class='try'>1</span>
+                    <b>Richtig:</b><span class="number">0</span>
+                </div>
+            </div>
+            <button class='answers'>Richtige Antworte</button>
+            <button class="reset">Try again</button>   
+        </div>
+        <div class="ex2">
+            <h3>Lerne Farben</h3>
+            <img class='colors' src='images/colors.jpg'>
+            <h3>Spielen wir!</h3>
+            <p>- lila <br>
+                - das Fenster!
+            </p>
+            <h3>Wiederhole Grammatik</h3>
+            <img class='article' src='images/article.jpg'>
+            <img class='pronouns' src='images/pronouns.png'>
+            <p>- Das ist <b>ein</b> Fenster. <b>Das</b> Fenster ist <b>weiß</b>.</p>
+            <h3>Was magst du hier?</h3>
+            <p>Ich mag <b>den</b> Tisch</p>
+            <h3>Was hast du zu Hause?</h3>
+            <p>Ich habe <b>ein</b> Bett. </p>
+        </div>
+    </div>
+    <hr>
+    <h2>Lektion 2</h2>
+    <div class='lesson lesson2'>
+        <div class='ex1'>
+            <b><i>In meinem Zimmer ...</i></b>
+            <h3>Singular und plural</h3>
+            <p>Das <b>ist</b> <b><i>ein</i></b> Buch.</p>
+            <p>Und das <b>sind</b> <b><i>(-)</i></b> Bücher.</p>
+            <h3>Bestimmte und unbestimmte Artikel</h3>
+            <p><b><i>Das</i></b> Buch <b>ist</b> grün </p>
+            <p>Und <b><i>die</i></b> Bücher <b>sind</b> auch grün.</p>
+        </div>
+
+        <div class="new-adj">
+            <div class='de-list'>
+                <div>groß</div>
+                <div>klein</div>
+                <div>schön</div>
+                <div>nicht schön, unschön</div>
+                <div>alt</div>
+                <div>neu</div>
+                <div>gut</div>
+                <div>schlecht</div>
+            </div>
+            <div class='ru-list'>
+                <div>большой</div>
+                <div>маленький</div>
+                <div>красивый</div>
+                <div>некрасивый</div>
+                <div>старый</div>
+                <div>новый</div>
+                <div>хороший</div>
+                <div>плохой</div>
+            </div>
+        </div>
+        <div class='ex2'>
+            <h3>Akkusativ</h3>
+            <h3>кого? что?</h3>
+            <p>Ich <b>habe</b> ein Zimmer</p>
+            <h3>Richtig oder falsch?</h3>
+            <div class='verbs'>sehen</div>
+            <div class='verbs'>haben</div>
+            <div class='verbs'>heißen</div>
+            <div class='verbs'>legen</div>
+            <div class='verbs'>wohnen</div>
+            <div class='verbs'>mögen</div>
+            <div class='verbs'>stellen</div>
+            
+        </div>
+    </div>
+    <hr>
+    <h2>Lektion 3: Wo ist was?</h2>
+    <div class='lesson lesson3'>
+        <img src='images/verbs-positions.png'>
+        <div class='radio-test'>
+            <p><b>Finde die richtige Übersetzung</b></p>
+            <b>Hängen</b>
+            <p><input name='q1' type='radio' value='sit'>Сидеть</p>
+            <p><input name='q1' type='radio' value='hang'>Висеть</p>
+            <p><input name='q1' type='radio' value='lie'>Лежать</p>
+            <b>Stehen</b>
+            <p><input name='q2' type='radio' value='sit'>Сидеть</p>
+            <p><input name='q2' type='radio' value='hang'>Висеть</p>
+            <p><input name='q2' type='radio' value='lie'>Лежать</p>
+            <b>Liegen</b>
+            <p><input name='q3' type='radio' value='sit'>Сидеть</p>
+            <p><input name='q3' type='radio' value='hang'>Висеть</p>
+            <p><input name='q3' type='radio' value='lie'>Лежать</p>
+            <button class='btn btn-radio'>Antworten</button>
+        </div>
+        <img src='images/place-pronouns.jpg'>
+        <img src='images/ex6.png'>
+        <h4>Üb. 6</h4>
+        <ol>
+            <li>Die Lampe <input class='ex6' type='text' data-answer='steht' > <b>auf</b> dem Boden</li>
+            <li>Der Stuhl <input class='ex6' type='text' data-answer='steht' > <b>auf</b> dem Schreibtisch</li>
+            <li>Zwei Poster <input class='ex6' type='text' data-answer='hängen' > <b>an</b> der Wand</li>
+            <li>Die CDs <input class='ex6' type='text' data-answer='liegen' > <b>im</b> Papierkorb</li>
+            <li>Die Kleider <input class='ex6' type='text' data-answer='liegen' > <b>unter</b> dem Bett</li>
+            <hr>
+            <li>Der Papierkorb steht  <b>zwischen</b> <input class='ex6' type='text' data-answer='dem' >Bett 
+                und <input class='ex6' type='text'data-answer='dem' > Sessel</li>
+            <li>Die Zeitschrifte liegen <b>vor</b> <input class='ex6' type='text' data-answer='dem' >Bett</li>
+            <li>Die Schultasche liegt <b>neben</b> <input class='ex6' type='text' data-answer='dem' >Bett</li>
+            <li><b>In</b> <input class='ex6' type='text' data-answer='dem' > Regal liegen einiege Bücher</li>
+            <li><b>Über</b> <input class='ex6' type='text' data-answer='dem' > Schreibtisch  hängen Bilder 
+                <b>an</b> <input class='ex6' type='text' data-answer='der' > Wand</li>
+            <li>Der Teppich liegt <b>hinter</b> <input class='ex6' type='text' data-answer='dem' >Sessel</li>
+        </ol>
+        
+
+    </div>
+    <hr>
+    <div class='lesson lesson4'>
+        <img class='rus-cases' src='images/rus-cases.jpg'>
+        <table class='article-table'>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th class='masculine'>der</th>
+                    <th class='neutral'>das</th>
+                    <th class='feminine'>die</th>
+                    <th class='plural'>die</th>
+                </tr>
+                <tr>
+                    <td>Nominative</td>
+                    <td class='masculine'><input type='text' class='table-input' data-answer='der'></td>
+                    <td class='neutral'><input type='text' class='table-input' data-answer='das'></td>
+                    <td class='feminine'><input type='text' class='table-input' data-answer='die'></td>
+                    <td class='plural'><input type='text' class='table-input' data-answer='die'></td>
+                </tr>
+                <tr>
+                    <td>Genetive</td>
+                    <td class='masculine'></td>
+                    <td class='neutral'></td>
+                    <td class='feminine'></td>
+                    <td class='plural'></td>
+                </tr>
+                <tr class='in-study'>
+                    <td>Dative</td>
+                    <td class='masculine'><input type='text' class='table-input' data-answer='dem'></td>
+                    <td class='neutral'><input type='text' class='table-input' data-answer='dem'></td>
+                    <td class='feminine'><input type='text' class='table-input' data-answer='der'></td>
+                    <td class='plural'><input type='text' class='table-input' data-answer='den'></td>
+                </tr>
+                <tr>
+                    <td>Akkusativ</td>
+                    <td class='masculine'><input type='text' class='table-input' data-answer='den'></td>
+                    <td class='neutral'><input type='text' class='table-input' data-answer='das'></td>
+                    <td class='feminine'><input type='text' class='table-input' data-answer='die'></td>
+                    <td class='plural'><input type='text' class='table-input' data-answer='die'></td>
+                </tr>
+            </thead>
+        </table>
+        <div class='ex-articles'>
+            Das ist <input type='text' data-answer='ein'>Zimmer.  <input type='text' data-answer='das'> Zimmer ist groß und schön. 
+            In <input type='text' data-answer='dem'> Zimmer gibt es <input type='text' data-answer='einen'> Tisch,
+            <input type='text' data-answer='einen'> Stuhl, <input type='text' data-answer='ein'> Bett.
+            <input type='text' data-answer='der'> Tisch ist nicht groß, er ist braun und stehtt vor
+            <input type='text' data-answer='dem'> Fenster. Hinter <input type='text' data-answer='dem'> Tisch steht 
+            <input type='text' data-answer='der'> Stuhl. Rechts, an <input type='text' data-answer='der'> Wand steht 
+            <input type='text' data-answer='das'> Bett. Oben hängen 2 Bilder. Unten, unter <input type='text' data-answer='dem'> Bett,
+            liegen meine Schulsachen - ich habe <input type='text' data-answer='einen'> Rucksack,
+            viele <input type='text' data-answer=''> Hefte, <input type='text' data-answer=''> Bücher.
+            In <input type='text' placeholder='mein' data-answer='meinem'> Zimmer gibt es auch 
+            <input type='text' data-answer='einen'> Kaktus. Er ist grün und steht auf 
+            <input type='text' placeholder='mein' data-answer='meinem'> Tisch. Ich mag <input type='text' placeholder='mein' data-answer='mein'> Zimmer.
+
+            
+        </div>
+    </div>
+    <script src='index.js'></script>
+</body>
+</html>

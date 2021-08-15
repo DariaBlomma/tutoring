@@ -1,0 +1,188 @@
+* {
+    font-size: 18px;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lesson, .new-adj {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.lesson2 {
+    margin-right: 100px;
+    align-items: center;
+}
+
+.new-adj {
+    margin-right: 300px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.card, .reset, .btn {
+    height: 30px;
+    border: 1px solid black;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.de-card {
+    background-color: gray;
+    color: white;
+}
+
+.ru-card {
+    background-color: rgb(250, 234, 165);
+}
+
+.ru-cards {
+    margin-left: 10px;
+}
+
+.empty-card {
+    min-width: 80px;
+}
+
+.reset, .btn {
+    background-color: rgb(194, 239, 247);
+    margin: auto;
+}
+
+.answers {
+    background-color: rgb(166, 248, 186);
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+.btn:disabled, .reset:disabled {
+    opacity: 0.3;
+    color: black;
+}
+
+.right-answers, .ex1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+}
+
+.selected {
+    border: 1px solid blue;
+}
+
+.right {
+    box-shadow: 10px 0px 10px 0px rgba(0, 119, 5, 0.75), -10px 0px 10px 0px rgba(0, 119, 5, 0.75);
+}
+
+.wrong {
+    box-shadow: 10px 0px 10px 0px rgba(245, 60, 4, 0.75), -10px 0px 10px 0px rgba(245, 60, 4, 0.75);
+}
+
+.ex2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.colors, .pronouns {
+    width: 400px;
+}
+
+.article{
+    width: 800px;
+}
+
+.pronouns {
+    border: 3px solid black;
+    margin-top: 10px;
+}
+
+.de-list div, .ru-list div {
+    padding: 5px;
+    background-color: gray;
+    color: white;
+    font-size: 20px;
+}
+
+.ru-list div {
+    background-color: rgb(250, 234, 165);
+    color: black;
+}
+
+.verbs {
+    padding: 10px;
+    border: 1px solid black;
+    min-width: 50px;
+}
+
+.lesson3 {
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.right {
+    color: green;
+}
+
+.wrong {
+    color: red;
+}
+
+.article-table {
+    border-collapse: collapse;
+    background-color: #f6ce96;
+    align-self: center;
+}
+td, th {
+    border: 1px solid black;
+    padding: 10px;
+    min-width: 30px;
+}
+
+.masculine {
+    background-color: blue;
+    color: white;
+}
+
+.neutral {
+    background-color: #c9c4c4;
+}
+
+.feminine {
+    background-color: #fc5270;
+}
+
+.plural {
+    background-color: rgb(96 0 174);
+    color: white;
+}
+
+.table-input {
+    width: 30px;
+    background-color: transparent;
+    color: inherit;
+}
+
+.in-study td {
+    font-size: 24px;
+}
+
+.ex-articles {
+    margin-left: 20px;
+}
+
+.rus-cases {
+    width: 30%;
+    margin-right: 20px;
+}

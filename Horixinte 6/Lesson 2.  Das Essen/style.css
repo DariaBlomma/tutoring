@@ -1,0 +1,33 @@
+* {
+    font-size: 18px;
+}
+
+body {
+    background: rgb(255,209,0);
+    background: radial-gradient(circle, rgba(255,209,0,1) 0%, rgba(121,76,9,1) 69%, rgba(36,24,0,1) 100%);
+}
+
+h1 {
+    color: white;
+}
+
+.lesson1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.eating-table {
+    border-collapse: collapse;
+}
+
+td, th {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.eating-table input {
+    border: none;
+    width: 100%;
+    
+}

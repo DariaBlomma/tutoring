@@ -1,0 +1,241 @@
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu {
+    width: 40px;
+    margin-left: auto;
+    margin-right: 5px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    color: white;
+    z-index: 1;
+    /* background-color: rgba(0, 0, 0, 0.7); */
+    background-color: rgb(21 72 99 / 87%);
+    padding: 15px;
+    /*  */
+}
+
+.full-size {
+    height: 100vh;
+    width: 98%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-popup {
+    right: 0;
+}
+
+.personal-words {
+    justify-content: space-around;
+}
+
+.btn-add-words {
+    display: flex;
+    /* margin-top: 10px; */
+}
+
+
+
+.add-words {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.add-input {
+    margin: 0;
+    background-color: transparent;
+    color: white;
+}
+
+.add-words-row {
+    padding: 0;
+}
+
+.lesson-new-words {
+    /* height: 100vh;
+    width: 98%;
+    display: flex;
+    align-items: center;
+    justify-content: center; */
+    background-color: rgb(21 72 99 / 87%);
+    /* position: relative; */
+}
+
+.close {
+    width: 30px;
+    color: white;
+    display: flex;
+    margin-left: auto;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+button.btn-add-all {
+    display: flex;
+    margin: 10px auto;
+}
+
+/* .lesson-new-words .close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+} */
+
+.menu-list {
+    color: white;
+}
+
+.menu-list li {
+    padding: 5px;
+    font-size: 18px;
+}
+
+.menu-list li:hover {
+    color:antiquewhite;
+}
+
+.menu-list li:focus {
+    color: #ecbf81;
+}
+
+.lesson1 {
+    /* display: flex;
+    flex-direction: column; */
+    /* align-items: center; */
+    display: grid;
+    grid-template-areas: 
+    'speaking numbers letters'
+    '. input btn'
+    'ex3a text1 text2'
+    'ex3d text1 text2'
+    'answer answer answer'
+    'listening stars1 stars2';
+}
+
+img {
+    width: 100%;
+}
+
+.ex1 {
+    grid-area: speaking;
+}
+
+.primary-title {
+    font-size: 28px;
+    text-align: center;
+    margin-left: auto;
+}
+
+.ex2-numbers {
+    /* border-bottom: 2px solid #00000099; */
+    /* box-shadow: 0px 9px 8px 0px rgba(23, 25, 26, 0.2); */
+    grid-area: numbers;
+}
+
+.ex2-letters {
+    grid-area: letters;
+    height: 100%;
+}
+
+.input, .btn {
+    padding: 10px;
+    margin: 5px 10px;
+}
+
+.ex2-input {
+    grid-area: input;
+}
+
+.btn-show-new-words {
+    grid-area: btn;
+}
+
+.ex3a {
+    grid-area: ex3a;
+    height: 100%;
+}
+
+.ex3-text1 {
+    grid-area: text1;
+}
+
+.ex3-text2 {
+    grid-area: text2;
+    height: 100%;
+}
+
+.ex3d {
+    grid-area: ex3d;
+    height: 100%;
+}
+
+.ex3d-inputs{
+    grid-area: answer;
+    display: flex;
+}
+
+.ex3-stars1 {
+    grid-area: stars1;
+}
+
+.ex3-stars2 {
+    grid-area: stars2;
+    height: 100%;
+}
+
+.ex5 {
+    grid-area: listening;
+    height: 100%;
+}
+
+.result-info {
+    text-align: center;
+}
+
+table {
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 5px;
+    border: 1px solid #00000099;
+}
+
+.d-none {
+    display: none;
+}
+
+.is-error {
+    color: red;
+}
+
+.is-right {
+    color: green;
+}
+
+.is-right.input {
+    box-shadow: 4px 4px 24px 0px rgba(46, 178, 24, 0.2) inset;
+}
+
+.is-error.input {
+    box-shadow: 4px 4px 24px 0px rgba(178, 24, 24, 0.2) inset;
+}
+
+:disabled {
+    opacity: 0.5;
+}
