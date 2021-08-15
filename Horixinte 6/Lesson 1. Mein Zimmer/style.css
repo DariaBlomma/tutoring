@@ -144,6 +144,11 @@ ul {
     background-color: #f6ce96;
     align-self: center;
 }
+
+.indefinite {
+    margin-top: 10px;
+}
+
 td, th {
     border: 1px solid black;
     padding: 10px;

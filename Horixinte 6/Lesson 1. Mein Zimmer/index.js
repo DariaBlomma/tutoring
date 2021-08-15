@@ -179,7 +179,7 @@ const lesson3 = () => {
             radioParents = [];
         }, 3000);
     });
-/*answers ex 6: 
+    /*answers ex 6:
 1. steht
 2. steht
 3. hangen
@@ -192,6 +192,38 @@ const lesson3 = () => {
 10.dem, der
 11. dem
 */
+    const saveProgress = elem => {
+        const ex = document.querySelector(`.${elem}`),
+            inputs = ex.querySelectorAll('input');
+        // console.log(ex, inputs);
+        const arr = [];
+
+        inputs.forEach(item => {
+        // item.value = lcWords[index];
+            if (item.value !== '') {
+                arr.push(item.value);
+            }
+        });
+        localStorage.setItem(elem, JSON.stringify(arr));
+        console.log(arr);
+    };
+
+    const showProgress = elem => {
+        const lcWords = JSON.parse(`${localStorage.getItem(elem)}`);
+        const ex = document.querySelector(`.${elem}`),
+            inputs = ex.querySelectorAll('input');
+        if (lcWords) {
+            inputs.forEach((item, index) => {
+                if (index < lcWords.length) {
+                    item.value = lcWords[index];
+                }
+            });
+        }
+    };
+    showProgress('ex-articles');
+    showProgress('definite');
+    showProgress('indefinite');
+
     document.addEventListener('blur', event => {
         const target = event.target;
         if (target.value === target.dataset.answer) {
@@ -207,6 +239,10 @@ const lesson3 = () => {
                 item.classList.remove('wrong');
             });
         }, 5000);
+        saveProgress('ex-articles');
+        saveProgress('definite');
+        saveProgress('indefinite');
     }, true);
+
 };
 lesson3();

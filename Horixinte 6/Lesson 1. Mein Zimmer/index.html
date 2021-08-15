@@ -147,45 +147,82 @@
     <hr>
     <div class='lesson lesson4'>
         <img class='rus-cases' src='images/rus-cases.jpg'>
-        <table class='article-table'>
-            <thead>
-                <tr>
-                    <th></th>
-                    <th class='masculine'>der</th>
-                    <th class='neutral'>das</th>
-                    <th class='feminine'>die</th>
-                    <th class='plural'>die</th>
-                </tr>
-                <tr>
-                    <td>Nominative</td>
-                    <td class='masculine'><input type='text' class='table-input' data-answer='der'></td>
-                    <td class='neutral'><input type='text' class='table-input' data-answer='das'></td>
-                    <td class='feminine'><input type='text' class='table-input' data-answer='die'></td>
-                    <td class='plural'><input type='text' class='table-input' data-answer='die'></td>
-                </tr>
-                <tr>
-                    <td>Genetive</td>
-                    <td class='masculine'></td>
-                    <td class='neutral'></td>
-                    <td class='feminine'></td>
-                    <td class='plural'></td>
-                </tr>
-                <tr class='in-study'>
-                    <td>Dative</td>
-                    <td class='masculine'><input type='text' class='table-input' data-answer='dem'></td>
-                    <td class='neutral'><input type='text' class='table-input' data-answer='dem'></td>
-                    <td class='feminine'><input type='text' class='table-input' data-answer='der'></td>
-                    <td class='plural'><input type='text' class='table-input' data-answer='den'></td>
-                </tr>
-                <tr>
-                    <td>Akkusativ</td>
-                    <td class='masculine'><input type='text' class='table-input' data-answer='den'></td>
-                    <td class='neutral'><input type='text' class='table-input' data-answer='das'></td>
-                    <td class='feminine'><input type='text' class='table-input' data-answer='die'></td>
-                    <td class='plural'><input type='text' class='table-input' data-answer='die'></td>
-                </tr>
-            </thead>
-        </table>
+        <div>
+            <table class='article-table definite'>
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th class='masculine'>der</th>
+                        <th class='neutral'>das</th>
+                        <th class='feminine'>die</th>
+                        <th class='plural'>die</th>
+                    </tr>
+                    <tr>
+                        <td>Nominative</td>
+                        <td class='masculine'><input type='text' class='table-input' data-answer='der'></td>
+                        <td class='neutral'><input type='text' class='table-input' data-answer='das'></td>
+                        <td class='feminine'><input type='text' class='table-input' data-answer='die'></td>
+                        <td class='plural'><input type='text' class='table-input' data-answer='die'></td>
+                    </tr>
+                    <tr>
+                        <td>Genetive</td>
+                        <td class='masculine'></td>
+                        <td class='neutral'></td>
+                        <td class='feminine'></td>
+                        <td class='plural'></td>
+                    </tr>
+                    <tr class='in-study'>
+                        <td>Dative</td>
+                        <td class='masculine'><input type='text' class='table-input' data-answer='dem'></td>
+                        <td class='neutral'><input type='text' class='table-input' data-answer='dem'></td>
+                        <td class='feminine'><input type='text' class='table-input' data-answer='der'></td>
+                        <td class='plural'><input type='text' class='table-input' data-answer='den'></td>
+                    </tr>
+                    <tr>
+                        <td>Akkusativ</td>
+                        <td class='masculine'><input type='text' class='table-input' data-answer='den'></td>
+                        <td class='neutral'><input type='text' class='table-input' data-answer='das'></td>
+                        <td class='feminine'><input type='text' class='table-input' data-answer='die'></td>
+                        <td class='plural'><input type='text' class='table-input' data-answer='die'></td>
+                    </tr>
+                </thead>
+            </table>
+            <table class='article-table indefinite'>
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th class='masculine'>ein</th>
+                        <th class='neutral'>ein</th>
+                        <th class='feminine'>eine</th>
+                    </tr>
+                    <tr>
+                        <td>Nominative</td>
+                        <td class='masculine'><input type='text' class='table-input' data-answer='ein'></td>
+                        <td class='neutral'><input type='text' class='table-input' data-answer='ein'></td>
+                        <td class='feminine'><input type='text' class='table-input' data-answer='eine'></td>
+                    </tr>
+                    <tr>
+                        <td>Genetive</td>
+                        <td class='masculine'></td>
+                        <td class='neutral'></td>
+                        <td class='feminine'></td>
+                    </tr>
+                    <tr class='in-study'>
+                        <td>Dative</td>
+                        <td class='masculine'><input type='text' class='table-input' data-answer='einem'></td>
+                        <td class='neutral'><input type='text' class='table-input' data-answer='einem'></td>
+                        <td class='feminine'><input type='text' class='table-input' data-answer='einer'></td>
+                    </tr>
+                    <tr>
+                        <td>Akkusativ</td>
+                        <td class='masculine'><input type='text' class='table-input' data-answer='einen'></td>
+                        <td class='neutral'><input type='text' class='table-input' data-answer='ein'></td>
+                        <td class='feminine'><input type='text' class='table-input' data-answer='eine'></td>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+
         <div class='ex-articles'>
             Das ist <input type='text' data-answer='ein'>Zimmer.  <input type='text' data-answer='das'> Zimmer ist groß und schön. 
             In <input type='text' data-answer='dem'> Zimmer gibt es <input type='text' data-answer='einen'> Tisch,
@@ -198,9 +235,7 @@
             viele <input type='text' data-answer=''> Hefte, <input type='text' data-answer=''> Bücher.
             In <input type='text' placeholder='mein' data-answer='meinem'> Zimmer gibt es auch 
             <input type='text' data-answer='einen'> Kaktus. Er ist grün und steht auf 
-            <input type='text' placeholder='mein' data-answer='meinem'> Tisch. Ich mag <input type='text' placeholder='mein' data-answer='mein'> Zimmer.
-
-            
+            <input type='text' placeholder='mein' data-answer='meinem'> Tisch. Ich mag <input type='text' placeholder='mein' data-answer='mein'> Zimmer.      
         </div>
     </div>
     <script src='index.js'></script>
