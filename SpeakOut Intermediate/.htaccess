@@ -1,2 +1,2 @@
 RewriteEngine On
-DirectoryIndex unit1_lesson1.html
+DirectoryIndex {$_SERVER['DOCUMENT_ROOT']}unit1_lesson1.html
