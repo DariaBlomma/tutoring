@@ -199,6 +199,19 @@ img {
     height: 100%;
 }
 
+.ex5-audio {
+    display: none;
+}
+.ex5-audio.visible {
+    display: block;
+    grid-area: stars1;
+    margin-top: 40px;
+    margin-left: 35px;
+    box-shadow: 4px 4px 72px 18px rgba(3, 4, 5);
+    border-radius: 30px;
+}
+
+
 .result-info {
     text-align: center;
 }

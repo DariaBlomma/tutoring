@@ -181,3 +181,11 @@ const fixHeader = () => {
 
 fixHeader();
 
+const showHover = () => {
+    const ex5 = document.querySelector('.ex5'),
+        ex5audio = document.querySelector('.ex5-audio');
+    ex5.addEventListener('mouseover', () => {
+        ex5audio.classList.add('visible');
+    });
+};
+showHover();
