@@ -1,0 +1,34 @@
+.words {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.dictionary {
+    display: flex;
+    box-shadow: 4px 4px 29px -6px rgba(11, 43, 17, 0.2) inset, 
+        -4px -4px 29px -6px rgba(11, 43, 17, 0.2) inset;
+    margin: 5px;
+    padding-right: 25px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    padding: 10px;
+    background-color: rgb(150, 204, 150);
+    border: 1px solid darkgreen;
+    margin-bottom: 5px;
+}
+
+.en li {
+    background-color: rgb(140, 172, 140);
+}
+
+.en .main, .ru .main {
+    background-color: rgb(20, 41, 20);
+    border: 1px solid rgb(156, 182, 156);
+    color: white;
+    
+}

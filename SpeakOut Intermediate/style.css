@@ -120,7 +120,8 @@ button.btn-add-all {
     'ex3a text1 text2'
     'ex3d text1 text2'
     'answer answer answer'
-    'listening stars1 stars2';
+    'listening stars1 stars2'
+    'addExes addExes addExes';
 }
 
 img {
@@ -211,6 +212,22 @@ img {
     border-radius: 30px;
 }
 
+.add-audio-exes {
+    grid-area: addExes;
+    display: flex;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+li {
+    padding: 10px;
+    border: 1px solid black;
+    background-color: #c0c0dd;
+}
 
 .result-info {
     text-align: center;
