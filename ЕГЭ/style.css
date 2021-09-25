@@ -9,6 +9,17 @@
         -4px -4px 29px -6px rgba(11, 43, 17, 0.2) inset;
     margin: 5px;
     padding-right: 25px;
+    padding-top: 25px;
+    position: relative;
+}
+
+.title-3 {
+    position: absolute;
+    top: -10px;
+    left: 30px;
+    color: #024302;
+    text-shadow: 4px 4px 2px rgba(150, 150, 150, 1);
+    font-family: Helvetica;
 }
 
 ul {
