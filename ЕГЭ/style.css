@@ -11,6 +11,7 @@
     padding-right: 25px;
     padding-top: 25px;
     position: relative;
+    flex-basis: 47%;
 }
 
 .title-3 {
@@ -48,6 +49,12 @@ li {
     
 }
 
+.input {
+    padding: 5px;
+    font-size: 16px;
+    width: 60%;
+}
+
 .another-topic .dictionary {
     box-shadow: 4px 4px 29px -6px rgba(255, 153, 0, 0.8) inset, 
     -4px -4px 29px -6px rgba(255, 153, 0, 0.2) inset;
@@ -61,4 +68,16 @@ li {
 .en .new, .ru .new {
     font-style: italic;
     background-color: #00ffff6b;
+}
+
+.right {
+    box-shadow: 10px 0px 10px 0px rgba(0, 119, 5, 0.75), -10px 0px 10px 0px rgba(0, 119, 5, 0.75);
+}
+
+.wrong {
+    box-shadow: 10px 0px 10px 0px rgba(245, 60, 4, 0.75), -10px 0px 10px 0px rgba(245, 60, 4, 0.75);
+}
+
+.not-for-add {
+    opacity: 0.5;
 }
