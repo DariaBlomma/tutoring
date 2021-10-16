@@ -226,6 +226,196 @@ const lesson2 = () => {
         highlightAnswers();
     };
     workPresent();
-};
+
+    // drag and drop
+    // todo: - после сброса элемента в нужную область создать на его предыдущем месте новый элемент. Чтобы можно было вернуть на место слово и пересобрать предложение
+    // todo: кнопка проверить должна быть неактивна, пока предложение не собрано полностью
+    // todo: кнопка проверить должна проверять только свою строку
+    // todo: сохранять в lc
+    // todo: в одну пустую клетку можно вставить сейчас несколько элементов
+
+    // не работает
+    const ruSentences = [
+        'На завтрак у нас есть хлеб с вареньем или мюсли',
+        'Я ем охотнее всего мюсли, моему брату больше нравится хлеб с вареньем.',
+        'Я пью одну чашку чая или две.',
+    ];
+    // данные карточек для совмещения
+    // ü ö ä ß Ü Ö Ä
+    const cardWords = [
+        "Zum Früstuck",
+        "gibt's bei uns",
+        "Brot",
+        "mit",
+        "Marmelade",
+        "und",
+        "Müslii.",
+        "Ich",
+        "esse",
+        "am liebsten",
+        "Müsli,",
+        "mein Bruder",
+        "mag",
+        "lieber",
+        "ein Marmeladenbrot.",
+        "Ich",
+        "trinke",
+        "eine Tasse",
+        "Tee",
+        "oder",
+        "zwei.",
+    ];
+
+    const copyCardWords = cardWords;
+    const deSentences = [];
+
+    const dotRegex = /\./;
+
+    const createDeSentences = () => {
+        let sentence = '';
+        cardWords.forEach((item, index) => {
+            console.log('cardWords start: ', cardWords);
+            sentence += ` ${item}`;
+            console.log('sentence: ', sentence);
+            // если есть точка
+            if (dotRegex.test(item)) {
+                deSentences.push(sentence);
+                console.log('deSentences: ', deSentences);
+                sentence = [];
+                // console.log('index: ', index);
+                cardWords.splice(0, index + 1);
+                console.log('cardWords splice: ', cardWords);
+                return cardWords;
+                //
+            }
+            // cardWords.shift();
+            console.log('cardWords end: ', cardWords);
+        });
+    };
+// console.log(cardWords.splice(0, 7));
+    createDeSentences();
+    const adjustedForClassName = text => text.toLowerCase().replace(/\s/g, '-');
+
+    const renderRuSentences = item => {
+        const div = document.createElement('div');
+        div.textContent = item;
+        div.className = 'ru-text__item';
+        document.querySelector('.ru-text').append(div);
+    };
+
+    const renderBoxItems = item => {
+        const div = document.createElement("div");
+        div.textContent = item;
+        div.setAttribute('draggable', true);
+        div.className = "box__item";
+        div.classList.add(adjustedForClassName(item));
+        document.querySelector('.box').append(div);
+    };
+
+    const renderResultItems = (elem, text) => {
+        const div = document.createElement("div");
+        div.className = "result__item";
+        div.addEventListener('drop', drop_handler);
+        div.addEventListener('dragover', dragover_handler);
+        div.addEventListener('dragleave', dragleave_handler);
+        div.dataset.answer = text;
+        div.textContent = text;
+        elem.append(div);
+    };
+
+    
+    // const renderResultLists = index => {
+    //     // debugger;
+    //     const div = document.createElement("div");
+    //     div.className = `result__line line-${index}`;
+    //     copyCardWords.forEach(item => {
+    //         renderResultItems(div, adjustedForClassName(item));            
+    //         // если есть точка
+    //         if (dotRegex.test(item)) {
+    //             // copyCardWords.pop(item);
+    //             div.innerHTML += `<button class='check'>Check</button>`;
+    //             return document.querySelector('.result').append(div);
+    //         }
+    //         copyCardWords.shift(item);
+    //     });
+    // };
+
+    const renderResultLists = index => {
+        // debugger;
+        const div = document.createElement("div");
+        div.className = `result__line line-${index}`;
+        div.innerHTML = `<button class='check'>Check</button>`;
+        document.querySelector('.result').append(div);
+    };
+
+    cardWords.forEach(item => {
+        renderBoxItems(item);
+    });
+
+    ruSentences.forEach((item, index) => {
+        renderResultLists(index);
+        renderRuSentences(item);
+    });
+    // const renderBackupDropZone = () => {
+    //     const div = document.createComment('div');
+    //     div.className = 'result__item';
+    //     document.querySelector('.box').append(div);
+    //     div.addEventListener('drop', drop_handler);
+    //     div.addEventListener('dragover', dragover_handler);
+    //     div.addEventListener('dragleave', dragleave_handler);
+    // };
+
+
+    function dragstart_handler(ev) {
+        const cl = ev.target.classList[ev.target.classList.length - 1];
+        // Add the target element's id to the data transfer object
+        ev.dataTransfer.setData("text/plain", ev.target.textContent);
+        ev.dataTransfer.setData("text/plain", cl);
+        ev.dataTransfer.dropEffect = "move";
+    }
+
+    function dragover_handler(ev) {
+        ev.preventDefault();
+        ev.dataTransfer.dropEffect = "move";
+        ev.target.classList.add('is-dragged-over');
+    }
+
+    function dragleave_handler(ev) {
+        ev.preventDefault();
+        ev.target.classList.remove('is-dragged-over');
+    }
+
+    function drop_handler(ev) {
+        ev.preventDefault();
+        // Get the id of the target and add the moved element to the target's DOM
+        const data = ev.dataTransfer.getData("text/plain");
+        const droppedElem = document.querySelector(`.${data}`);
+        ev.target.appendChild(droppedElem);
+        droppedElem.classList.add('is-dropped');
+        ev.target.classList.remove('is-dragged-over');
+        renderBackupDropZone();
+    }
+
+    const box__items = document.querySelectorAll('.box__item');
+
+    window.addEventListener('DOMContentLoaded', () => {
+        box__items.forEach(item => {
+            // Add the ondragstart event listener
+            item.addEventListener("dragstart", dragstart_handler);
+        })
+    });
+
+    const btn = document.querySelector('.check');
+    btn.addEventListener('click', () => {
+        const line1_items = document.querySelectorAll('.line1');
+        line1_items.forEach(item => {
+            if (item.childNodes[0].textContent.toLowerCase() === item.dataset.answer) {
+                item.childNodes[0].classList.add('right');
+            } else {
+                item.childNodes[0].classList.add('wrong');
+            }
+        })
+    })
+    };
 lesson2();
 
